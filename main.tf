@@ -1,17 +1,17 @@
 resource "aws_instance" "my_vm" {
- ami           = ami-0a6006bac3b9bb8d3
+ ami           = var.ami
  instance_type = var.instance_type
 
  tags = {
    Name = var.name_tag,
  }
 }
+
 resource "aws_s3_bucket" "example" {
-  bucket = "my-tf-test-bucket"
+  bucket = "kona123456"
 
   tags = {
-    Name        = "kona123456t"
+    Name        = "mybamuh"
     Environment = "Dev"
   }
 }
-
