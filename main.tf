@@ -5,5 +5,12 @@ resource "aws_instance" "my_vm" {
  tags = {
    Name = var.name_tag,
  }
+resource "aws_s3_bucket" "example" {
+  bucket = "my-tf-test-bucket"
+
+  tags = {
+    Name        = "kona123456t"
+    Environment = "Dev"
+  }
 }
 
